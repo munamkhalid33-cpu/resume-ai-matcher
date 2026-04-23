@@ -5,11 +5,11 @@ from parser import extract_resume_text
 from matcher import match_resume_to_job
 
 app = Flask(__name__)
-CORS(app, origins="*", supports_credentials=True)  # ← change this line
+CORS(app, origins="*", supports_credentials=True)  
 
-@app.route("/match", methods=["POST", "OPTIONS"])  # ← add OPTIONS
+@app.route("/match", methods=["POST", "OPTIONS"])  
 def match():
-    if request.method == "OPTIONS":                # ← add this block
+    if request.method == "OPTIONS":              
         return jsonify({"status": "ok"}), 200
 
     file = request.files.get("resume")
