@@ -8,7 +8,7 @@ from matcher import match_resume_to_job
 app = Flask(__name__, static_folder='static', static_url_path='')
 CORS(app)
 
-# API endpoint - stays the same
+# API endpoint
 @app.route('/match', methods=['POST', 'OPTIONS'])
 def match():
     if request.method == 'OPTIONS':
